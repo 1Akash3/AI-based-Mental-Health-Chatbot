@@ -1,0 +1,117 @@
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  background-color: #f4f8fb; /* Very light blue */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#chat-container {
+  width: 90%;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#messages div {
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  border-radius: 15px;
+  clear: both;
+}
+
+#messages div:last-child {
+  margin-bottom: 0;
+}
+
+#messages div:nth-child(even) {
+  background-color: #e6f7ff; /* Light blue for bot messages */
+  color: #333;
+  float: left;
+}
+
+#messages div:nth-child(odd) {
+  background-color: #f0f0f0; /* Light gray for user messages */
+  color: #333;
+  float: right;
+}
+
+#input-area {
+  display: flex;
+  gap: 10px;
+}
+
+#input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#send, #mic {
+  background-color: #a7d9ed; /* Calming blue */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#send:hover, #mic:hover {
+  background-color: #8acde5;
+}
+
+#avatar {
+  width: 200px; /* Adjust as needed */
+  height: 200px; /* Adjust as needed */
+  border-radius: 50%; /* Optional: Make it circular */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9; /* Light background if no transparency */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #chat-container {
+      width: 95%;
+      margin-bottom: 15px;
+  }
+
+  #avatar {
+      width: 150px;
+      height: 150px;
+  }
+}
+
+/* Optional: Scrollbar styling (may not work perfectly across browsers) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #a7d9ed;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #8acde5;
+}
