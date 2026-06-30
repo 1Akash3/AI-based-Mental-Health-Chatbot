@@ -1,0 +1,8 @@
+# Core API
+flask
+flask-cors
+
+# Optional — only needed for the standalone voice module (speech.py)
+SpeechRecognition
+pyttsx3
+PyAudio
